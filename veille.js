@@ -134,12 +134,20 @@ window.onload = function chargement() {
 
     document.querySelector('#x').addEventListener('change', function () {
         if (startMove == true) {
-            carre.style.left = document.querySelector('#x').value;
+            if (document.querySelector('#x').value >= 0 && document.querySelector('#x').value <= 450) {
+                carre.style.left = document.querySelector('#x').value;
+            } else {
+                document.querySelector('#x').value = "";
+            }
         }
     })
     document.querySelector('#y').addEventListener('change', function () {
         if (startMove == true) {
-            carre.style.bottom = document.querySelector('#y').value;
+            if (document.querySelector('#y').value >= 0 && document.querySelector('#y').value <= 450) {
+                carre.style.bottom = document.querySelector('#y').value;
+            } else {
+                document.querySelector('#y').value = "";
+            }
         }
     })
 
